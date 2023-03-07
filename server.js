@@ -33,7 +33,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         app.put('/quotes', (req, res) => {
             quotesCollection.findOneAndUpdate(
-                { name: 'Yoda' },
+                { name: 'ProductName' },
                 {
                     $set: {
                         name: req.body.name,
