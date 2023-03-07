@@ -1,38 +1,25 @@
-<!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <title>Toy Website</title>
     </head>
-
     <body>
         <h1>CREATE: Add toys in here</h1>
-        
-        <!-- (1): CREATE Task -->         
-        <!-- --> 
         <form action="/quotes" method="POST">
             <input type="text" placeholder="name" name="name" />
                 <input type="text" placeholder="price" name="quote" />
                 <button type="submit">Submit</button>
         </form>
-        <!-- -->                               
-
-        <!-- (2) READ Task -->                        
         <h2> READ: All toys in database </h2>
         <ul class="quotes">
-            <!-- Loop through quotes -->
             <% for(var i = 0; i < quotes.length; i++) {%>
                 <li class="quote">
-                    <!-- Output name from the iterated quote object -->
                     <span><%= quotes[i].name %></span>:
-                    <!-- Output quote from the iterated quote object -->
                     <span><%= quotes[i].quote %></span>
                 </li>
             <% } %>
-        </ul>    
-
-        <!-- (3) UPDATE Task -->
+        </ul>
         <div>
             <h2>UPDATE: Update toys</h2>
             <p>
@@ -48,10 +35,6 @@
             </p>
             <button id="delete-button">Delete a toy</button>
         </div>
-
-        <!-- ... -->
         <script src="/main.js"></script>
-    
     </body>
-
 </html>

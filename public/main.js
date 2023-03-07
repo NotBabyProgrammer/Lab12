@@ -1,15 +1,9 @@
 // main.js
 const update = document.querySelector('#update-button')
-
 const deleteButton = document.querySelector('#delete-button')
 
-
-
 update.addEventListener('click', _ => {
-
-    // Send PUT Request here
     fetch('/quotes', {
-
         method: 'put',
         headers: { 'Content-Type': 'application/json' },
 
@@ -25,7 +19,6 @@ update.addEventListener('click', _ => {
             window.location.reload(true)
         })
 })
-
 
 deleteButton.addEventListener('click', _ => {
     fetch('/quotes', {
